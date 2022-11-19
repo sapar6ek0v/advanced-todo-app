@@ -1,23 +1,19 @@
-import { FC, useEffect } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from './utils/firebaseConfig';
+import { FC, useState } from 'react';
+import Layout from './components/Layout';
+import NavBar from './components/NavBar';
+import Main from './components/Main';
+import { CategoriesContext } from './context/CategoriesContext';
 
 const App: FC = () => {
-  const todoCollectionRef = collection(db, 'todo');
-
-  const getTodos = async () => {
-    const data = await getDocs(todoCollectionRef);
-    console.log(data)
-  };
-
-  useEffect(() => {
-    getTodos()
-  }, [])
+  const [currentCategory, setCurrentCategory] = useState<string>('Home');
 
   return (
-    <div className="App">
-      Edit <code>src/App.tsx</code> and save to reload.
-    </div>
+    <CategoriesContext.Provider value={{ currentCategory, setCurrentCategory }}>
+      <Layout>
+        <NavBar />
+        <Main />
+      </Layout>
+    </CategoriesContext.Provider>
   );
 }
 

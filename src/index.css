@@ -5,4 +5,9 @@ body {
   padding: 0;
   box-sizing: 'border-box';
   font-family: 'Open Sans', sans-serif;
+  background-color: rgb(234, 237, 238);
+}
+
+ul {
+  list-style: none;
 }

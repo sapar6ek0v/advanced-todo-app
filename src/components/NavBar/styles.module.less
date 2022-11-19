@@ -1,0 +1,164 @@
+.wrapper {
+  width: 20vw;
+  height: calc(100vh - 80px);
+  overflow: auto;
+  background: rgb(255, 255, 255);
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+.fixedContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 40px;
+  width: 17vw;
+  height: calc(100vh - 80px);
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.nav {
+  width: 100%;
+}
+
+.ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 20px;
+  height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.25s ease 0s;
+  background: transparent;
+  margin-bottom: 10px;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  h6 {
+    margin: 0;
+    padding: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    background: rgb(234, 237, 238);
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 10px 20px;
+  }
+}
+
+.categoriesLoadingTitle {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+
+.active {
+  background: rgba(234, 237, 238, 0.87);
+}
+
+.inputWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.addIcon {
+  position: absolute;
+  left: 0;
+}
+
+.input {
+  outline: none;
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  transition: all 0.25s ease 0s;
+  border-bottom: 1px solid transparent;
+  padding-left: 30px;
+  padding-bottom: 5px;
+
+  &:focus {
+    border-bottom: 1px solid black;
+  }
+
+  &:focus-within {
+    border-bottom: 1px solid black;
+  }
+
+  &::placeholder {
+    font-style: italic;
+    font-weight: 600;
+  }
+}
+
+.totalQuantity {
+  min-width: 30px;
+  min-height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: rgb(109, 109, 109);
+  background-color: rgb(217, 217, 217);
+
+  .trash {
+    display: grid;
+    place-items: center;
+    border: none;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+    background-color: rgb(217, 217, 217);
+    transition: 0.25s ease;
+    transition-property: opacity;
+  }
+
+  &:hover {
+    .trash {
+      opacity: 1;
+    }
+  }
+}
+
+.loadingTitle {
+  font-weight: 500;
+  font-size: 14px;
+  font-style: italic;
+  color: rgb(0, 0, 0);
+  padding: 0px 0px 4px 30px;
+  margin: 0;
+}

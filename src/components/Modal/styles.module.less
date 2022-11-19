@@ -1,0 +1,36 @@
+.wrapper {
+  padding: 35px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 60;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalCard {
+  padding: 20px;
+  margin-top: 65px;
+  width: 50%;
+  background: rgb(255, 255, 255);
+  z-index: 10;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px 0 rgba(255, 255, 255, 0.3);
+
+  @media screen and (max-width: 768px) {
+    width: 70%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 90%;
+  }
+}
