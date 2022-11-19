@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 import { useCategoriesContext } from '../../context/CategoriesContext';
 import useGetTodos from '../../hooks/useGetTodos';
+import CreateLink from '../CreateLink';
 import Form from '../Form';
 import { HandleSubmitType } from '../Form/types';
 import Loader from '../Loader';
@@ -35,9 +36,14 @@ const Main: FC = () => {
         <div className={styles.row}>
           {
             (!isLoading && !!todos)
-              ? todos.map((todo) => (
-                <TodoCard key={todo.id} todo={todo} />
-              ))
+              ?
+              (
+                todos.length ?
+                  todos.map((todo) => (
+                    <TodoCard key={todo.id} todo={todo} />
+                  ))
+                  : <CreateLink path={currentCategory} handleOnClick={handleOpenModal} />
+              )
               : <Loader />
           }
         </div>
