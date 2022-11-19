@@ -2,34 +2,56 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+You can see demo in browser [url](https://todo-list-eta-five.vercel.app/)
 
-### `yarn start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+npm install
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Running the app
 
-### `yarn test`
+```bash
+# development
+$ yarn start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# production mode
+$ yarn run build
+```
 
-### `yarn build`
+## Test
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# tests
+$ yarn run test
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Database
 
-### `yarn eject`
+I used Firebase.
+You can find all the necessary materials here [firebase](https://firebase.google.com/docs/build)
+
+### Update .env file
+
+`REACT_APP_FIREBASE_API_KEY=api_key`
+`REACT_APP_FIREBASE_AUTH_DOMAIN=api_key`
+`REACT_APP_FIREBASE_PROJECT_ID=project_id`
+`REACT_APP_FIREBASE_STORAGE_BUCKET=storage_bucket`
+`REACT_APP_FIREBASE_MESSAGING_SENDER_ID=messaging_sender_id`
+`REACT_APP_FIREBASE_APP_ID=app_id`
+`REACT_APP_FIREBASE_MEASUREMENT_ID=measurement_id`
+
+## Eject
+
+```bash
+# eject
+$ yarn run eject
+
+```
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
